@@ -1,9 +1,12 @@
 package com.antigravity.twentyfortyeight.engine
 
+import kotlinx.serialization.Serializable
+
 /**
  * Pure game logic — no Android/Compose dependencies.
  * Represents the current state of a 2048 board.
  */
+@Serializable
 data class GameBoard(
     val grid: List<List<Int>>,
     val score: Int = 0,
