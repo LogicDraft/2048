@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.antigravity.twentyfortyeight.engine.GameBoardTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2026-04-28T17:15:35" hostname="GOWTHAM-PC" time="0.045">
+  <properties/>
+  <testcase name="isGameOver_returnsFalseWhenAnyEmptyCellExists" classname="com.antigravity.twentyfortyeight.engine.GameBoardTest" time="0.027"/>
+  <testcase name="moveDown_mergesColumnsAndAccumulatesScore" classname="com.antigravity.twentyfortyeight.engine.GameBoardTest" time="0.014"/>
+  <testcase name="isGameOver_returnsFalseWhenVerticalMergeExists" classname="com.antigravity.twentyfortyeight.engine.GameBoardTest" time="0.0"/>
+  <testcase name="isGameOver_returnsFalseWhenHorizontalMergeExists" classname="com.antigravity.twentyfortyeight.engine.GameBoardTest" time="0.0"/>
+  <testcase name="moveUp_mergesColumnsAndAccumulatesScore" classname="com.antigravity.twentyfortyeight.engine.GameBoardTest" time="0.0"/>
+  <testcase name="moveLeft_mergesRowsAndAccumulatesScore" classname="com.antigravity.twentyfortyeight.engine.GameBoardTest" time="0.0"/>
+  <testcase name="isWon_returnsFalseWhenBoardHasNoWinningTile" classname="com.antigravity.twentyfortyeight.engine.GameBoardTest" time="0.001"/>
+  <testcase name="moveWithoutGridChangeReturnsFalseAndDoesNotSpawn" classname="com.antigravity.twentyfortyeight.engine.GameBoardTest" time="0.0"/>
+  <testcase name="isGameOver_returnsTrueForFullBoardWithNoPossibleMerges" classname="com.antigravity.twentyfortyeight.engine.GameBoardTest" time="0.0"/>
+  <testcase name="isWon_returnsTrueWhenBoardContains2048OrHigher" classname="com.antigravity.twentyfortyeight.engine.GameBoardTest" time="0.001"/>
+  <testcase name="moveRight_mergesRowsAndAccumulatesScore" classname="com.antigravity.twentyfortyeight.engine.GameBoardTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

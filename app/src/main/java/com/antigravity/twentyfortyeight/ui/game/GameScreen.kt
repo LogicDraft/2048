@@ -43,7 +43,7 @@ fun GameScreen(
     var showPauseMenu by remember { mutableStateOf(false) }
     var showExitDialog by remember { mutableStateOf(false) }
     val isDark = LocalIsDarkTheme.current
-    val isActiveGame = !state.isGameOver && !(state.isWon && !state.continueAfterWin)
+    val isActiveGame = !state.isGameOver && !state.isWon
 
     BackHandler(enabled = showPauseMenu) {
         showPauseMenu = false
@@ -216,14 +216,14 @@ fun GameScreen(
                 textContentColor = if (isDark) Color(0xCCFFFFFF) else Color(0xCC1F1F2E),
                 title = {
                     Text(
-                        text = "Leave game?",
+                        text = "Quit Game?",
                         fontFamily = SyneFontFamily,
                         fontWeight = FontWeight.ExtraBold
                     )
                 },
                 text = {
                     Text(
-                        text = "Your current board will be saved before returning home.",
+                        text = "Your progress is saved.",
                         fontFamily = DmSansFontFamily,
                         fontSize = 14.sp
                     )
@@ -239,7 +239,7 @@ fun GameScreen(
                         colors = ButtonDefaults.buttonColors(containerColor = PrimaryStart)
                     ) {
                         Text(
-                            text = "Save & leave",
+                            text = "Quit",
                             fontFamily = DmSansFontFamily,
                             fontWeight = FontWeight.Bold
                         )
@@ -248,7 +248,7 @@ fun GameScreen(
                 dismissButton = {
                     TextButton(onClick = { showExitDialog = false }) {
                         Text(
-                            text = "Stay",
+                            text = "Cancel",
                             fontFamily = DmSansFontFamily,
                             fontWeight = FontWeight.SemiBold,
                             color = if (isDark) OnSurfaceDark else OnSurfaceLight

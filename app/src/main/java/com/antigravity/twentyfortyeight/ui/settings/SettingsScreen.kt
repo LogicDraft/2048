@@ -21,6 +21,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.antigravity.twentyfortyeight.theme.*
 import com.antigravity.twentyfortyeight.settings.SettingsViewModel
 
@@ -39,8 +40,8 @@ fun SettingsScreen(
     onBack: () -> Unit,
     vm: SettingsViewModel = hiltViewModel()
 ) {
-    val isDark by vm.darkMode.collectAsState()
-    val hapticsEnabled by vm.hapticsEnabled.collectAsState()
+    val isDark by vm.darkMode.collectAsStateWithLifecycle()
+    val hapticsEnabled by vm.hapticsEnabled.collectAsStateWithLifecycle()
     var showClearConfirm by remember { mutableStateOf(false) }
 
     Column(
