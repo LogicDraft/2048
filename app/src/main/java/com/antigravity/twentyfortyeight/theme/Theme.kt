@@ -37,15 +37,27 @@ private val DarkColorScheme = darkColorScheme(
 
 // ---- Composition Local for dark mode override ----
 val LocalIsDarkTheme = staticCompositionLocalOf { false }
+val LocalGameColors = staticCompositionLocalOf { ClassicGameColors }
 
 @Composable
 fun TwentyFortyEightTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
+    currentTheme: String = "classic",
     content: @Composable () -> Unit
 ) {
-    val colorScheme = if (darkTheme) DarkColorScheme else LightColorScheme
+    val gameColors = gameColorsFor(currentTheme, darkTheme)
+    val baseColorScheme = if (darkTheme) DarkColorScheme else LightColorScheme
+    val colorScheme = baseColorScheme.copy(
+        primary = gameColors.primary,
+        secondary = gameColors.secondary,
+        surfaceVariant = gameColors.gridBackground,
+        onSurfaceVariant = gameColors.tileText(2)
+    )
 
-    CompositionLocalProvider(LocalIsDarkTheme provides darkTheme) {
+    CompositionLocalProvider(
+        LocalIsDarkTheme provides darkTheme,
+        LocalGameColors provides gameColors
+    ) {
         MaterialTheme(
             colorScheme = colorScheme,
             typography = AppTypography,
@@ -53,3 +65,29 @@ fun TwentyFortyEightTheme(
         )
     }
 }
+
+private fun gameColorsFor(theme: String, darkTheme: Boolean): GameColors =
+    when (theme.lowercase()) {
+        "neon" -> NeonGameColors
+        "glass" -> FrostedGlassGameColors
+        "retro" -> RetroGameColors
+        "minimalist" -> MinimalistGameColors
+        "dark" -> ClassicGameColors.copy(
+            primary = PrimaryEnd,
+            secondary = AccentEnd,
+            gridBackground = GridBgDark,
+            emptyTile = TileEmptyDark,
+            tileDarkText = TileDarkText,
+            tileLightText = TileLightText
+        )
+        else -> if (darkTheme) {
+            ClassicGameColors.copy(
+                primary = PrimaryEnd,
+                secondary = AccentEnd,
+                gridBackground = GridBgDark,
+                emptyTile = TileEmptyDark
+            )
+        } else {
+            ClassicGameColors
+        }
+    }

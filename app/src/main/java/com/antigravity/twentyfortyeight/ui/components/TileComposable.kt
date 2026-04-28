@@ -20,26 +20,13 @@ import androidx.compose.ui.unit.sp
 import com.antigravity.twentyfortyeight.theme.*
 import kotlinx.coroutines.launch
 
-fun tileColor(value: Int): Color = when (value) {
-    0 -> Color.Transparent
-    2 -> Tile2
-    4 -> Tile4
-    8 -> Tile8
-    16 -> Tile16
-    32 -> Tile32
-    64 -> Tile64
-    128 -> Tile128
-    256 -> Tile256
-    512 -> Tile512
-    1024 -> Tile1024
-    2048 -> Tile2048Start
-    else -> TileHigh
-}
+@Composable
+fun tileColor(value: Int): Color =
+    LocalGameColors.current.tileBackground(value)
 
-fun tileTextColor(value: Int): Color = when {
-    value <= 4 -> TileDarkText
-    else -> TileLightText
-}
+@Composable
+fun tileTextColor(value: Int): Color =
+    LocalGameColors.current.tileText(value)
 
 fun tileFontSize(value: Int, cellSize: Dp): Float {
     val base = cellSize.value * 0.36f
@@ -114,12 +101,13 @@ fun TileComposable(
         }
     }
 
-    val bgColor = tileColor(value)
-    val textColor = tileTextColor(value)
+    val gameColors = LocalGameColors.current
+    val bgColor = gameColors.tileBackground(value)
+    val textColor = gameColors.tileText(value)
     val fontSize = tileFontSize(value, cellSize)
 
     val is2048 = value == 2048
-    val glowColor = if (value >= 512) tileColor(value) else Color.Transparent
+    val glowColor = if (value >= 512) gameColors.tileBackground(value) else Color.Transparent
 
     Box(
         modifier = modifier
@@ -139,7 +127,7 @@ fun TileComposable(
             )
             .then(
                 if (is2048) Modifier.background(
-                    Brush.linearGradient(listOf(Tile2048Start, Tile2048End)),
+                    Brush.linearGradient(listOf(gameColors.tile2048Start, gameColors.tile2048End)),
                     RoundedCornerShape(16.dp)
                 )
                 else Modifier.background(bgColor, RoundedCornerShape(16.dp))

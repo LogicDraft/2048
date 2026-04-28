@@ -20,8 +20,12 @@ class MainActivity : ComponentActivity() {
         setContent {
             val settingsVm: SettingsViewModel = hiltViewModel()
             val darkMode by settingsVm.darkMode.collectAsStateWithLifecycle()
+            val currentTheme by settingsVm.currentTheme.collectAsStateWithLifecycle()
 
-            TwentyFortyEightTheme(darkTheme = darkMode) {
+            TwentyFortyEightTheme(
+                darkTheme = darkMode,
+                currentTheme = currentTheme
+            ) {
                 AppNavGraph()
             }
         }

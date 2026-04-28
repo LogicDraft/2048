@@ -47,6 +47,157 @@ val TileHigh = Color(0xFF1E1B4B)     // 4096+
 val TileDarkText = Color(0xFF776E65)  // for light tiles (2, 4)
 val TileLightText = Color(0xFFF9F6F2) // for colored tiles
 
+data class GameColors(
+    val primary: Color,
+    val secondary: Color,
+    val gridBackground: Color,
+    val emptyTile: Color,
+    val tile2: Color,
+    val tile4: Color,
+    val tile8: Color,
+    val tile16: Color,
+    val tile32: Color,
+    val tile64: Color,
+    val tile128: Color,
+    val tile256: Color,
+    val tile512: Color,
+    val tile1024: Color,
+    val tile2048Start: Color,
+    val tile2048End: Color,
+    val highTile: Color,
+    val tileDarkText: Color,
+    val tileLightText: Color
+) {
+    fun tileBackground(value: Int): Color = when (value) {
+        0 -> Color.Transparent
+        2 -> tile2
+        4 -> tile4
+        8 -> tile8
+        16 -> tile16
+        32 -> tile32
+        64 -> tile64
+        128 -> tile128
+        256 -> tile256
+        512 -> tile512
+        1024 -> tile1024
+        2048 -> tile2048Start
+        else -> highTile
+    }
+
+    fun tileText(value: Int): Color =
+        if (value <= 4) tileDarkText else tileLightText
+}
+
+val ClassicGameColors = GameColors(
+    primary = PrimaryStart,
+    secondary = AccentStart,
+    gridBackground = GridBgLight,
+    emptyTile = TileEmptyLight,
+    tile2 = Tile2,
+    tile4 = Tile4,
+    tile8 = Tile8,
+    tile16 = Tile16,
+    tile32 = Tile32,
+    tile64 = Tile64,
+    tile128 = Tile128,
+    tile256 = Tile256,
+    tile512 = Tile512,
+    tile1024 = Tile1024,
+    tile2048Start = Tile2048Start,
+    tile2048End = Tile2048End,
+    highTile = TileHigh,
+    tileDarkText = TileDarkText,
+    tileLightText = TileLightText
+)
+
+val NeonGameColors = GameColors(
+    primary = Color(0xFF22D3EE),
+    secondary = Color(0xFFFF2E88),
+    gridBackground = Color(0xFF111827),
+    emptyTile = Color(0xFF1F2937),
+    tile2 = Color(0xFFBFF7FF),
+    tile4 = Color(0xFFE4D7FF),
+    tile8 = Color(0xFF22D3EE),
+    tile16 = Color(0xFF38BDF8),
+    tile32 = Color(0xFFA855F7),
+    tile64 = Color(0xFFFF2E88),
+    tile128 = Color(0xFFFF7A18),
+    tile256 = Color(0xFFFACC15),
+    tile512 = Color(0xFF34D399),
+    tile1024 = Color(0xFF14B8A6),
+    tile2048Start = Color(0xFFFF2E88),
+    tile2048End = Color(0xFF22D3EE),
+    highTile = Color(0xFF0F172A),
+    tileDarkText = Color(0xFF111827),
+    tileLightText = Color.White
+)
+
+val FrostedGlassGameColors = GameColors(
+    primary = Color(0xFF7DD3FC),
+    secondary = Color(0xFFC4B5FD),
+    gridBackground = Color(0x33FFFFFF),
+    emptyTile = Color(0x22FFFFFF),
+    tile2 = Color(0xBFEFF6FF),
+    tile4 = Color(0xBFEDE9FE),
+    tile8 = Color(0x99BAE6FD),
+    tile16 = Color(0x99A5B4FC),
+    tile32 = Color(0x99C4B5FD),
+    tile64 = Color(0x99F0ABFC),
+    tile128 = Color(0x99F9A8D4),
+    tile256 = Color(0x99FDE68A),
+    tile512 = Color(0x99A7F3D0),
+    tile1024 = Color(0x9986EFAC),
+    tile2048Start = Color(0xCCFDE68A),
+    tile2048End = Color(0xCC7DD3FC),
+    highTile = Color(0xAA312E81),
+    tileDarkText = Color(0xFF243044),
+    tileLightText = Color.White
+)
+
+val RetroGameColors = GameColors(
+    primary = Color(0xFFEAB308),
+    secondary = Color(0xFFEF4444),
+    gridBackground = Color(0xFF3D2C1F),
+    emptyTile = Color(0xFF5A4634),
+    tile2 = Color(0xFFF8E7B0),
+    tile4 = Color(0xFFECCB8B),
+    tile8 = Color(0xFFD88A3D),
+    tile16 = Color(0xFFC75C2E),
+    tile32 = Color(0xFFB83A2D),
+    tile64 = Color(0xFF7F1D1D),
+    tile128 = Color(0xFF4D7C0F),
+    tile256 = Color(0xFF166534),
+    tile512 = Color(0xFF155E75),
+    tile1024 = Color(0xFF3730A3),
+    tile2048Start = Color(0xFFFFD166),
+    tile2048End = Color(0xFFEF476F),
+    highTile = Color(0xFF1F130B),
+    tileDarkText = Color(0xFF3D2C1F),
+    tileLightText = Color(0xFFFFF7ED)
+)
+
+val MinimalistGameColors = GameColors(
+    primary = Color(0xFF111827),
+    secondary = Color(0xFF64748B),
+    gridBackground = Color(0xFFE5E7EB),
+    emptyTile = Color(0xFFF8FAFC),
+    tile2 = Color(0xFFFFFFFF),
+    tile4 = Color(0xFFF3F4F6),
+    tile8 = Color(0xFFE5E7EB),
+    tile16 = Color(0xFFD1D5DB),
+    tile32 = Color(0xFF9CA3AF),
+    tile64 = Color(0xFF6B7280),
+    tile128 = Color(0xFF4B5563),
+    tile256 = Color(0xFF374151),
+    tile512 = Color(0xFF1F2937),
+    tile1024 = Color(0xFF111827),
+    tile2048Start = Color(0xFF0F172A),
+    tile2048End = Color(0xFF475569),
+    highTile = Color(0xFF020617),
+    tileDarkText = Color(0xFF111827),
+    tileLightText = Color.White
+)
+
 // Multiplayer
 val PlayerYellow = Color(0xFFFFCC02)
 val PlayerBlue = Color(0xFF4A90D9)

@@ -12,11 +12,7 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.antigravity.twentyfortyeight.engine.Direction
 import com.antigravity.twentyfortyeight.engine.GameBoard
-import com.antigravity.twentyfortyeight.theme.GridBgDark
-import com.antigravity.twentyfortyeight.theme.GridBgLight
-import com.antigravity.twentyfortyeight.theme.LocalIsDarkTheme
-import com.antigravity.twentyfortyeight.theme.TileEmptyDark
-import com.antigravity.twentyfortyeight.theme.TileEmptyLight
+import com.antigravity.twentyfortyeight.theme.LocalGameColors
 import kotlin.math.abs
 
 @Composable
@@ -27,9 +23,9 @@ fun GridComposable(
     gridPadding: Dp = 12.dp,
     tileGap: Dp = 8.dp
 ) {
-    val isDark = LocalIsDarkTheme.current
-    val gridBg = if (isDark) GridBgDark else GridBgLight
-    val tileEmpty = if (isDark) TileEmptyDark else TileEmptyLight
+    val gameColors = LocalGameColors.current
+    val gridBg = gameColors.gridBackground
+    val tileEmpty = gameColors.emptyTile
     val n = board.gridSize
     val motionState = remember(n) { GridMotionState(previousBoard = board) }
 
