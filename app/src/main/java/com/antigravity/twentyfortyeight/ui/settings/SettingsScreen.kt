@@ -20,7 +20,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.hilt.navigation.compose.hiltViewModel
 import com.antigravity.twentyfortyeight.theme.*
 import com.antigravity.twentyfortyeight.settings.SettingsViewModel
 
@@ -37,7 +37,7 @@ private val themes = listOf(
 @Composable
 fun SettingsScreen(
     onBack: () -> Unit,
-    vm: SettingsViewModel = viewModel()
+    vm: SettingsViewModel = hiltViewModel()
 ) {
     val isDark by vm.darkMode.collectAsState()
     val hapticsEnabled by vm.hapticsEnabled.collectAsState()
