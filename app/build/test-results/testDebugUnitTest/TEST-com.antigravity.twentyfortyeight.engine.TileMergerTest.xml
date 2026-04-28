@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.antigravity.twentyfortyeight.engine.TileMergerTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-04-28T17:15:35" hostname="GOWTHAM-PC" time="0.004">
+  <properties/>
+  <testcase name="mergeRow_fourEqualTilesMergeIntoTwoPairs" classname="com.antigravity.twentyfortyeight.engine.TileMergerTest" time="0.001"/>
+  <testcase name="mergeRow_mergesAcrossZeros" classname="com.antigravity.twentyfortyeight.engine.TileMergerTest" time="0.001"/>
+  <testcase name="mergeRow_slidesTilesThroughZerosWithoutScoring" classname="com.antigravity.twentyfortyeight.engine.TileMergerTest" time="0.0"/>
+  <testcase name="mergeRow_supportsLargerRows" classname="com.antigravity.twentyfortyeight.engine.TileMergerTest" time="0.0"/>
+  <testcase name="mergeRow_allZeros_returnsSameRowWithNoScore" classname="com.antigravity.twentyfortyeight.engine.TileMergerTest" time="0.0"/>
+  <testcase name="mergeRow_mergesSinglePair" classname="com.antigravity.twentyfortyeight.engine.TileMergerTest" time="0.0"/>
+  <testcase name="mergeRow_threeEqualTilesDoesNotChainMergeInOneMove" classname="com.antigravity.twentyfortyeight.engine.TileMergerTest" time="0.0"/>
+  <testcase name="mergeRow_twoIndependentPairsMergeOnceEach" classname="com.antigravity.twentyfortyeight.engine.TileMergerTest" time="0.0"/>
+  <testcase name="mergeRow_edgeCasePairThenDistinctTiles" classname="com.antigravity.twentyfortyeight.engine.TileMergerTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
