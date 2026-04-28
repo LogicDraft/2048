@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="com_google_android_gms_fonts_certs">
+        <item>@array/com_google_android_gms_fonts_certs_dev</item>
+        <item>@array/com_google_android_gms_fonts_certs_prod</item>
+    </array>
+    <string-array name="com_google_android_gms_fonts_certs_dev">
+        <item>
+            MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYD
+            VQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4g
+            VmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UE
+            AxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTAe
+            Fw0wODA0MTUyMzM2NTZaFw0zNTA5MDEyMzM2NTZaMIGUMQswCQYDVQQGEwJVUzET
+            MBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4G
+            A1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9p
+            ZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTCCASAwDQYJKoZI
+            hvcNAQEBBQADggENADCCAQgCggEBANbOLggKv+IxTdGNs8/TGFy0PTP6DHThvttJ
+            tlxNBMFtMtASF5yMI63TrSOgRi3GBmxhf7JiqTh5FNQ3MaEMtlbPEEWBY4mkPBfp
+            ywxVmdz0Y2M4kJmJHSPDGj4dWEF3JiQGNx/yiHQxJNRy+R5pA71waTjIiSjEinzK
+            X6nPJVAGsMuT/yT6GbRfmMMakZWqUxaMklmkzMV1FiuDnuv/eMJw6fUm3XZRRqbw
+            7V2gkdWHmCEXUKRK5NWJeqIAWh2bF+XUMzA2nXFB1R8RgcLAHq2DLFNQvPFCrJhB
+            0vEiRxW9p1HsULVMFdtPIyiuvJn+1iFMjikbFXVFCAkCAwEAAaNjMGEwHQYDVR0O
+            BBYEFMx3ItdEFJPsEAoaKZ6u+KS1gFLgMB8GA1UdIwQYMBaAFMx3ItdEFJPsEAoa
+            KZ6u+KS1gFLgMA8GA1UdEwEB/wQFMAMBAf8wDgYDVR0PAQH/BAQDAgGGMA0GCSqG
+            SIb3DQEBBAUAA4IBAQCV3RAbLAsLt5ANXxObB9EqMJuUd8Wb3GKxBiHjVADRmWQZ
+            T14PaXKdCLGiA3W0JkIBbKMWmIqmT6B1zioZQF+FEumKAi0KDovB3Gk8kxuJXF92
+            raSJ3EDXFa5MWG0lRUVlmUmI9U/7K6fBnVhD2mJ08I8Eh+Ri/eYh0v2YM/lzBSEe
+            7mFG9h2VBR8KBE7DP8sRYHj/M28LfBV7BphN/v5pBv/mD9AMfJToMUWLWRDDpFpZ
+            fHnPb4JJhcasxSwm1x3n8ZIbxm5YMtJQ4pvVPOh5z/zv+/3t7aUrxCriKNFvyVcl
+            jJZGijYlTj0sTdlXmBggjqU3x3RTm8fo
+        </item>
+    </string-array>
+    <string-array name="com_google_android_gms_fonts_certs_prod">
+        <item>
+            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
+        </item>
+    </string-array>
+    <color name="ic_launcher_background">#FF7C3AED</color>
+    <string name="app_name">2048</string>
+    <style name="Theme.TwentyFortyEight" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">@android:color/black</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+    </style>
+</resources>
