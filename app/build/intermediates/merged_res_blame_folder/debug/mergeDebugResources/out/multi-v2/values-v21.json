@@ -4,7 +4,7 @@
             "outputFile": "com.antigravity.twentyfortyeight.app-mergeDebugResources-64:/values-v21/values-v21.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\gowda\\.gradle\\caches\\8.11.1\\transforms\\b2a1dfc2e982feb73ff63315a6efc35e\\transformed\\core-1.15.0\\res\\values-v21\\values-v21.xml",
+                    "source": "C:\\Users\\gowda\\.gradle\\caches\\8.11.1\\transforms\\c14435c36f1d780e5fc48768f44cfe02\\transformed\\core-1.15.0\\res\\values-v21\\values-v21.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,13",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",
